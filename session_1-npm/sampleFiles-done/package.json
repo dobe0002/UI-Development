@@ -14,6 +14,7 @@
   },
   "scripts": {
     "eslint": "eslint ./",
-    "clean": "rm package-lock.json && rm -rf node_modules && npm i"
+    "clean": "rm package-lock.json && rm -rf node_modules && npm i",
+    "npmAuditJson": "npm audit || npm audit --json --audit-level moderate > npmAuditReport.json"
   }
 }
