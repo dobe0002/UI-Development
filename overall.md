@@ -25,5 +25,19 @@
 - [jest-axe](https://github.com/nickcolley/jest-axe) - automated accessibility testing
 - [axios](https://github.com/axios/axios) - ajax calls
 - [date-fns](https://date-fns.org/) - date logic
-- [lodash](https://lodash.com/) - Collection manipulation when vanilla methods won't work
+- [lodash](https://lodash.com/) - Collection manipulation when [vanilla array methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) won't work
 - [reactstrap](https://reactstrap.github.io/) - React Bootstrap 4 components
+
+## Suggested IDE and/or plugins
+
+Any IDE will work, so feel free to use whatever you are most comfortable with. With that said, many UI and NodeJS developers use [Visual Studio Code](https://code.visualstudio.com/) because it adds additional features like breakpoints.
+
+### Suggested plugins
+
+- ESLint
+- HTML Boilerplate
+- Jest
+- Npm Dependency
+- npm Intellisense
+- Prettier
+- Reactjs code snippets

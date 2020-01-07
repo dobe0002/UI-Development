@@ -3,14 +3,12 @@
 
 $('#jQuery').hide();
 $('#jQuery').html('Hello World!');
-$('#jQuery').fadeIn('slow');
 
 /* **************************** */
 /* Axios example */
-const googleId = '18077uj95WnuAV4cqucAbARLyRVjDPidziQC2eBDfxMk';
-const url = `https://spreadsheets.google.com/feeds/list/${googleId}/1/public/full?alt=json`;
+
+const url = `https://baconipsum.com/api/?type=all-meat&paras=1`;
 
 axios.get(url).then(response => {
-  console.log(response.data);
-  document.getElementById('axios').innerText = JSON.stringify(response.data);
+  document.getElementById('axios').innerText = response.data[0];
 });
