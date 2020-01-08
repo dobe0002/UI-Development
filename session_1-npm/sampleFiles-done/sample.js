@@ -3,7 +3,7 @@
 
 $('#jQuery').hide();
 $('#jQuery').html('Hello World!');
-
+$('#jQuery').fadeIn();
 /* **************************** */
 /* Axios example */
 
