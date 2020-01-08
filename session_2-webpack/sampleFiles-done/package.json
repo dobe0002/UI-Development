@@ -1,0 +1,43 @@
+{
+  "name": "includes_and_webpack_demo",
+  "version": "0.0.1",
+  "description": "",
+  "repository": "",
+  "author": "University of Minnesota - OIT",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "date-fns": "^2.8.1",
+    "lodash": "^4.17.15",
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.4.5",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "7.5.5",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.8.0",
+    "event-hooks-webpack-plugin": "^2.1.5",
+    "file-loader": "^4.3.0",
+    "glob": "^7.1.6",
+    "ignore-emit-webpack-plugin": "^2.0.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-git-hash": "^1.0.2"
+  },
+  "scripts": {
+    "eslint": "eslint ./",
+    "clean": "rm package-lock.json && rm -rf node_modules && npm i",
+    "npmAudit": "npm audit --audit-level moderate",
+    "npmAuditJson": "npm run npmAudit -- --json --audit-level moderate > npmAuditReport.json",
+    "build": " rm -rf build && webpack --mode production "
+  }
+}

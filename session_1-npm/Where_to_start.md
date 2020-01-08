@@ -11,7 +11,7 @@ NPM is the package manager and extremely simple build tools used for both nodeJS
 You can check that NPM is installed by running the following command in terminal:
 
 ```
-npm -v
+npm --version
 ```
 
 NOTE: NPM version 6.0.0 or larger is required to receive security warnings.
@@ -94,7 +94,7 @@ Then the "clean" script can be run by typing `npm run clean`
 
 ## Installing Packages
 
-To install the dependancies listed in the package.json file, just run:
+To install the dependencies listed in the package.json file, just run:
 
 ```
 npm install
@@ -103,6 +103,10 @@ npm install
 This will download all the dependencies into a `node_modules` directory. This directory should be added to the `gitignore`. `npm install` should be run as part of the build process.
 
 A `package-lock.json` file will be created listing all the dependencies with the exact version installed. The `package-log.json` file should be checked into Github. Future `npm install` commands will install the exact versions listed in teh package-lock.json file.
+
+**NOTE:** If you want to just install the dependencies, then run `npm install --production`
+
+If you want to remove installed devDependencies, then run `npm prune --production`
 
 ---
 
@@ -138,19 +142,23 @@ A better approach is to use WebPack (see session_2)
 
 ## Steps To Do Now
 
-- Install NodeJS (along with NPM) on development machines
+- Verify NPM (version 6.0.0 or larger) is available : ( run `npm --version`)
 
-  - Run `npm --version` to see if it is already installed
-
-- Install NodeJS (along with NPM) on build servers/containers
+  - Development machines
+  - Build servers/containers (aka Jenkins, GitHub Actions, etc)
 
 - Add package.json to projects
 
-  - [Add lint/formatters](https://github.umn.edu/dobe0002/AppTemplate) to assist development)
+  - add meta data
+  - [Add lint/formatters](https://github.umn.edu/dobe0002/AppTemplate) to assist development
 
 - Load dependencies via npm
 
+  - List dependencies in package.json
+  - Add `node_modules` to `.gitignore`
+  - Reference node_modules path to js/css libraries in the html
   - Add `npm install` to build scripts
+  - Add `npm prune --production` to the end of the build scripts to remove devDependencies
 
 - Add `npm audit` to build scrips
 
