@@ -1,0 +1,16 @@
+$gray: #333;
+$fonts: Arial, Helvetica, sans-serif;
+
+body {
+  * {
+    color: $gray;
+    font-family: $fonts;
+  }
+  p {
+    font-size: 110%;
+  }
+}
+#textType {
+  font-weight: bold;
+  font-size: 200%;
+}
