@@ -1,12 +1,19 @@
 import axios from 'axios';
 import * as _reduce from 'lodash/reduce';
 
+/* **************************************************** */
+/* ***** Set Default Global ****** */
+const defaultType = 'bacon';
+
+/* ***** Ipsum class ****** */
 export default class Ipsum {
-  constructor(type = 'bacon', paragraph = 2) {
-    this.type = type; // note type should be "hippie", "pony", "bacon"
+  constructor(type = defaultType, paragraph = 2) {
+    this.type = type; // type: "dino", "pony", "bacon"
     this.paragraph = paragraph;
     this.data = [];
   }
+
+  /* ***** get method ****** */
   async get() {
     let url = this.getURL();
     if (url === '') {
@@ -15,13 +22,17 @@ export default class Ipsum {
 
     const data = await axios.get(url);
     this.data = data.data;
+    if (this.type === 'dino') {
+      this.data = this.data[0];
+    }
     return this.data;
   }
 
+  /* ***** getURL method ****** */
   getURL() {
     switch (this.type) {
-      case 'hippie':
-        return `http://www.hippieipsum.me/api/v1/get/${this.paragraph}`;
+      case 'dino':
+        return `http://dinoipsum.herokuapp.com/api/?format=json&paragraphs=1&words=${this.paragraph}`;
       case 'pony':
         return `https://ponyipsum.com/api/?type=all-pony&paras=${this.paragraph}`;
       case 'bacon':
@@ -30,10 +41,9 @@ export default class Ipsum {
         return '';
     }
   }
+
+  /* ***** formatAsParagraph method (unused) ****** */
   formatAsParagraph(array) {
-    if (this.type === 'hippie') {
-      array = array.paragraph;
-    }
     return _reduce(
       array,
       (html, paragraph) => {
@@ -43,4 +53,3 @@ export default class Ipsum {
     );
   }
 }
-//export default Ipsum;

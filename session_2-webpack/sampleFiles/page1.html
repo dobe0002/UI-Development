@@ -4,15 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="build/css/myStyles.4f1bda7.css" rel="stylesheet" />
     <title>Document</title>
   </head>
   <body>
     <h1>
-      Hello world - welcome to page 1! - all about <scan id="textType"></scan>
+      Hello world - welcome to page 1! - All about
+      <span id="textType1" class="type"></span> and
+      <span id="textType2" class="type"></span>
     </h1>
-    <div id="bar" style="height:15px"></div>
-    <div id="pony"></div>
-    <script src="build/js/page1.4f1bda7.js"></script>
+    <div class="bar" style="height:15px"></div>
+    <div id="container1"></div>
+    <div class="bar" style="height:5px"></div>
+    <div id="container2"></div>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+    <script src="node_modules/lodash/lodash.min.js"></script>
+    <script src="http://cdn.date-fns.org/v2.0.0-alpha0/date_fns.min.js"></script>
+    <script src="js/Formatter.js"></script>
+    <script src="js/Ipsum.js"></script>
+    <script src="js/page1.js"></script>
   </body>
 </html>

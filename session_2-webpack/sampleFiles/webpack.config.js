@@ -1,14 +1,17 @@
 const path = require('path');
 const fs = require('fs');
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const EventHooksPlugin = require('event-hooks-webpack-plugin');
 
+// Code to get the last gitCommit hash
 const gitCommit = require('child_process')
   .execSync('git rev-parse HEAD')
   .toString()
   .trim()
   .slice(0, 7);
 
+// Global variables
 let entry = {};
 let htmlFiles = [];
 
@@ -17,54 +20,25 @@ const outputDir = 'build';
 
 /**************** FILES TO BE COMPRESSED ***************** */
 // COMPRESS A GIVEN LIST OF FILES
-entry = {
-  // List all js/css/scss you want compressed
-  page1: './js/page1.js',
-  page2: './js/page2.js',
-  myStyles: ['./scss/main.scss', './scss/body.scss']
-};
-
-// COMPRESS ALL FILES IN A DIRECTORY
-// If you want Webpack to automatically compress all files in a directory uncomment the following code:
-
-/*
-const glob = require('glob');
-const setEntry = fileArray => {
-  return fileArray.reduce((entryObj, file) => {
-    let fileName = path.parse(file).name.split('.');
-    entryObj[fileName] = file;
-    return entryObj;
-  }, {});
-};
-
-const files = glob.sync('./js/*.js'); // be sure to change the directory and extension
-entry = setEntry(files);
-
-// If you have other directories you want to include,  follow this pattern
-
-//const cssFiles = glob.sync('./scss/*.scss'); // be sure to change the directory and extension
-//const entryCSS = setEntry(cssFiles);
-//entry = Object.assign(entry, entryCSS);
-
-*/
+entry = {};
 
 /* ****************************************** */
 
 /**************** HTML FILES/INCLUDES TO BE UPDATED ***************** */
 // The following is a list of files that should have the html/css paths updated
 
-htmlFiles = ['./page1.html', './page2.html'];
+htmlFiles = [];
 
 /* ****************************************** */
 
 module.exports = {
   context: __dirname,
 
-  entry: entry, //see  FILES TO BE COMPRESSED above.  Be sure to comment out the entry list above.
+  entry: entry,
 
   output: {
     path: path.resolve(__dirname, outputDir),
-    filename: `js/[name].${gitCommit}.js`
+    filename: `js/[name].js`
   },
 
   resolve: {
@@ -75,10 +49,11 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `css/[name].${gitCommit}.css`,
-      chunkFilename: `css/[id].${gitCommit}.css`,
+      filename: `css/[name].css`,
+      chunkFilename: `css/[id].css`,
       allChunks: true
-    }),
+    })
+    /*
     new EventHooksPlugin({
       done: () => {
         console.log('GIT VERSION:', gitCommit);
@@ -95,6 +70,7 @@ module.exports = {
         });
       }
     })
+    */
   ],
   module: {
     rules: [

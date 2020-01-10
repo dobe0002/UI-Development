@@ -1,13 +1,17 @@
-import reduce from 'lodash/reduce';
-
+import * as _reduce from 'lodash/reduce';
 import { format } from 'date-fns';
 
+/* **************************************************** */
+/* ***** convertDateToString function (unused) ****** */
 export const convertDateToString = date => {
   return format(date, 'MM-dd-yyyy');
 };
+
+/* **************************************************** */
+/* ***** createList function  ****** */
 export const createList = array => {
   return (
-    reduce(
+    _reduce(
       array,
       (html, paragraph) => {
         return html + `<li>${paragraph}</li>`;
@@ -16,6 +20,9 @@ export const createList = array => {
     ) + '</ul>'
   );
 };
+
+/* **************************************************** */
+/* ***** getRandomColor function  ****** */
 export const getRandomColor = () => {
   var c = '';
   while (c.length < 6) {
