@@ -16,7 +16,19 @@ Each session will also provide "next step" that can be done immediately as work 
 ## Sessions
 
 - [NPM](https://github.com/dobe0002/UI-Development/blob/master/session_1-npm/Where_to_start.md)
-- Javascript Includes and Webpack
+- Javascript includes and Webpack
+- Testing - introduction to Jest
+- Linting (why important for security) (???)
+- Team discussion - where are what do we need to do?
+- Publish a package
+
+- Intro to SCSS (???)
+- Atomic design
+- Intro to React
+- React Routing
+- Testing React components
+- Publishing components
+- CSS in React components
 
 ---
 

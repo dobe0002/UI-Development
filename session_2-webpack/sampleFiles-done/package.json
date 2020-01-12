@@ -18,19 +18,13 @@
     "@babel/runtime": "7.5.5",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
-    "eslint": "^6.8.0",
     "event-hooks-webpack-plugin": "^2.1.5",
-    "file-loader": "^4.3.0",
     "glob": "^7.1.6",
-    "ignore-emit-webpack-plugin": "^2.0.2",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
-    "style-loader": "^1.0.0",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.9.0",
-    "webpack-git-hash": "^1.0.2"
+    "webpack-cli": "^3.3.5"
   },
   "scripts": {
     "eslint": "eslint ./",

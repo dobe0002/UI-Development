@@ -58,7 +58,7 @@ htmlFiles = ['./page1.html', './page2.html'];
 /* ****************************************** */
 
 module.exports = {
-  context: __dirname,
+  //context: __dirname,
 
   entry: entry, //see  FILES TO BE COMPRESSED above.  Be sure to comment out the entry list above.
 
