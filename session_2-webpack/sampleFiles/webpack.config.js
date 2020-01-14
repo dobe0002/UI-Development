@@ -11,41 +11,23 @@ const gitCommit = require('child_process')
   .trim()
   .slice(0, 7);
 
-// Global variables
-let entry = {};
-let htmlFiles = [];
-
-/**************** OUTPUT (aka build) DIRECTORY ***************** */
-const outputDir = 'build';
-
-/**************** FILES TO BE COMPRESSED ***************** */
-// COMPRESS A GIVEN LIST OF FILES
-entry = {};
-
-/* ****************************************** */
-
 /**************** HTML FILES/INCLUDES TO BE UPDATED ***************** */
 // The following is a list of files that should have the html/css paths updated
 
-htmlFiles = [];
+let htmlFiles = [];
 
 /* ****************************************** */
 
 module.exports = {
-  context: __dirname,
-
-  entry: entry,
+  entry: {
+    my_page_2: './js/page2.js'
+  },
 
   output: {
-    path: path.resolve(__dirname, outputDir),
+    path: path.resolve(__dirname, 'build'),
     filename: `js/[name].js`
   },
-
-  resolve: {
-    extensions: ['.js', '.json', '.jsx']
-  },
   devtool: '#source-map',
-  // performance: { hints: false },
 
   plugins: [
     new MiniCssExtractPlugin({

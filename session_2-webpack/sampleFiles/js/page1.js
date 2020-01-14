@@ -1,4 +1,4 @@
-// Need to include Ipusm class from Ipsum.js
+// Need to include Ipsum class from Ipsum.js
 // Need to include createList and getRandomColor from Formatter.js
 
 /* **************************************************** */
@@ -7,6 +7,8 @@ Array.from(document.getElementsByClassName('bar')).forEach(bar => {
   bar.style.backgroundColor = getRandomColor();
 });
 
+/* **************************************************** */
+/* ***** Set Pony paragraph ****** */
 let ipsum = new Ipsum('pony');
 document.getElementById('textType1').innerHTML = ipsum.type;
 
@@ -27,4 +29,4 @@ ipsum2.get().then(data => {
 
 /* **************************************************** */
 /* ***** Get defaultType from Ipsum.js ****** */
-console.log('defaultType:', defaultType);
+// console.log('defaultType:', defaultType);
