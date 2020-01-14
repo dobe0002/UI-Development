@@ -27,4 +27,5 @@ ipsum2.get().then(data => {
 
 /* **************************************************** */
 /* ***** Get defaultType from Ipsum.js ****** */
-console.log('defaultType:', defaultType);
+// The following line should produce and error because defaultType is not scoped outside of the Ipsum.js file
+//console.log('Default type setting from page1.js:', defaultType);

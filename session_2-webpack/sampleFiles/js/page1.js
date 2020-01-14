@@ -29,4 +29,4 @@ ipsum2.get().then(data => {
 
 /* **************************************************** */
 /* ***** Get defaultType from Ipsum.js ****** */
-// console.log('defaultType:', defaultType);
+console.log('Default type setting from page1.js:', defaultType);

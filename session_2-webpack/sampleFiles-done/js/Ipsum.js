@@ -8,6 +8,7 @@ const defaultType = 'bacon';
 /* ***** Ipsum class ****** */
 export default class Ipsum {
   constructor(type = defaultType, paragraph = 2) {
+    console.log('Default type setting from within Ipsum class:', defaultType);
     this.type = type; // type: "dino", "pony", "bacon"
     this.paragraph = paragraph;
     this.data = [];
