@@ -30,11 +30,13 @@ module.exports = {
   devtool: '#source-map',
 
   plugins: [
+    /*
     new MiniCssExtractPlugin({
       filename: `css/[name].css`,
       chunkFilename: `css/[id].css`,
       allChunks: true
     })
+    */
     /*
     new EventHooksPlugin({
       done: () => {
@@ -42,7 +44,7 @@ module.exports = {
 
         // replace css and js in html include new gitCommit
         const pattern = new RegExp(
-          `(${outputDir}\/(js|css)\/[a-zA-Z0-9.-_]+\.)([a-zA-Z0-9]{7})(\.(js|css))`,
+          `(build\/(js|css)\/[a-zA-Z0-9.-_]+\.)([a-zA-Z0-9]{7})(\.(js|css))`,
           'g'
         );
         htmlFiles.forEach(filePath => {
@@ -63,6 +65,7 @@ module.exports = {
           loader: 'babel-loader'
         }
       },
+
       {
         test: /\.(s[ac]ss|css)$/i,
         use: [

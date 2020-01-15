@@ -27,7 +27,7 @@
     "webpack-cli": "^3.3.5"
   },
   "scripts": {
-    "clean": "rm -f package-lock.json && rm -rf node_modules && rm -rf build && npm run build",
+    "clean": "rm -f package-lock.json && rm -rf node_modules && rm -rf build ",
     "npmAudit": "npm audit --audit-level moderate",
     "npmAuditJson": "npm run npmAudit -- --json --audit-level moderate > npmAuditReport.json",
     "build": " rm -rf build && webpack --mode production "
