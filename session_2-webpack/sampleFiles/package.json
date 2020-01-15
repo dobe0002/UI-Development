@@ -21,13 +21,13 @@
     "event-hooks-webpack-plugin": "^2.1.5",
     "glob": "^7.1.6",
     "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.5"
   },
   "scripts": {
-    "eslint": "eslint ./",
-    "clean": "rm package-lock.json && rm -rf node_modules && npm i && npm run build",
+    "clean": "rm -f package-lock.json && rm -rf node_modules && rm -rf build && npm run build",
     "npmAudit": "npm audit --audit-level moderate",
     "npmAuditJson": "npm run npmAudit -- --json --audit-level moderate > npmAuditReport.json",
     "build": " rm -rf build && webpack --mode production "
