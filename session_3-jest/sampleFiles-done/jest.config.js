@@ -9,8 +9,9 @@ module.exports = {
     '!**/node_modules/**',
     '!**/coverage/**',
     '!**/build/**',
-    '!**/jest.config.js/**',
-    '!**/__fixtures__/**'
+    '!**/jest.config.js',
+    '!**/__fixtures__/**',
+    '!**/utils/**'
   ],
   coverageReporters: ['html', 'cobertura', 'json-summary', 'text-summary']
 };
