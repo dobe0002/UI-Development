@@ -1,0 +1,12 @@
+/*
+// BEFORE:
+.no, .nope, .not_good {
+  color: #f00;
+}
+*/
+
+.no,
+.nope,
+.not_good {
+  color: #f00;
+}

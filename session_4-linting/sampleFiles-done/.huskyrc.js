@@ -1,9 +1,7 @@
-const tasks = arr => arr.join(' && ')
+const tasks = arr => arr.join(' && ');
 
 module.exports = {
-  'hooks': {
-    'pre-commit': tasks([
-      'npm run eslint'
-    ])
+  hooks: {
+    'pre-commit': tasks(['npm run lint:all'])
   }
-}
+};

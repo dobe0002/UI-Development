@@ -1,0 +1,51 @@
+/*
+// BEFORE:
+
+$umn_maroon: #7a0019;
+
+.intro {
+  p {
+    margin: 0px auto;
+    font-size: 1.5em;
+    font-family: 'myfont','my other font','myfont',helvetica;
+    //my comment
+  }
+
+      .page-wrap {
+    padding: 10px 20px 60px;
+                margin: 0px auto;
+    border-radius: 10px!important;
+         border-color: rgb(0,0,0);
+  }
+}
+.avatar {border-radius: 50%; border: 2px solid white}
+/* */
+
+$umn_maroon: #7a0019;
+
+.intro {
+  p {
+    margin: 0 auto;
+    font-size: 1.5em;
+    font-family: 'myfont', 'my other font', helvetica, sans-serif;
+    //my comment
+  }
+
+  .page-wrap {
+    padding: 10px 20px 60px;
+    margin: 0 auto;
+    border-radius: 10px !important;
+    border-color: rgb(0, 0, 0);
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.no,
+.nope,
+.not_good {
+  color: #f00;
+}

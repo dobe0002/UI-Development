@@ -7,7 +7,7 @@ var my_variable = "This is my variable"
 my_variable = "This is no longer my variable"
 returnVars(my_variable)
 
-
+eval('alert("we should not be doing evals!!!')
 
 
 //Many lines above this comment
@@ -39,6 +39,8 @@ const returnVars = (...theArgs) => theArgs;
 let myVariable = 'This is my variable';
 myVariable = 'This is no longer my variable';
 returnVars(myVariable);
+
+// eval('alert("we should not be doing evals!!!')
 
 // Many lines above this comment
 
