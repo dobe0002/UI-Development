@@ -4,7 +4,7 @@ var my_variable = "This is my variable"
 my_variable = "This is no longer my variable"
 returnVars(my_variable)
 
-eval('alert("we should not be doing evals!!!')
+eval('alert("we should not be doing evals!!!")')
 
 
 //Many lines above this comment

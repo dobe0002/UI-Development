@@ -7,15 +7,23 @@
   "scripts": {
     "build": "echo 'build not defined yet'",
     "clean": "rm -f package-lock.json && rm -rf node_modules && rm -rf build && npm i && npm run build",
+    
     "----------------------------------------------------------1":"",
-    "eslint:fix": "npm run eslint -- --fix",
-    "eslint:watch": "esw --watch ",
-    "stylelint":"stylelint --ignore-path ./.eslintignore './**/*.+(css|scss)'",
-    "stylelint:fix":"npm run stylelint -- --fix",
+
     "prettier": "prettier  --ignore-path ./.eslintignore --check '**/*.+(js|jsx|html|css|scss|json)'",
     "prettier:fix": "prettier  --ignore-path ./.eslintignore --write '**/*.+(js|jsx|html|css|scss|json)'",
     "prettier:watch": "onchange '**/*.+(js|jsx|html|css|scss|json)' -- prettier --write {{changed}}",
     "----------------------------------------------------------2":"",
+
+    "eslint": "esw ",
+    "eslint:fix": "npm run eslint -- --fix",
+    "eslint:watch": "esw --watch ",
+    "----------------------------------------------------------3":"",
+
+    "stylelint":"stylelint --ignore-path ./.eslintignore './**/*.+(css|scss)'",
+    "stylelint:fix":"npm run stylelint -- --fix",
+    "----------------------------------------------------------4":"",
+
     "lint": "esw ",
     "lint:all": "npm run stylelint && npm run lint",
     "lint:fixAll": "npm run prettier:fix && npm run eslint:fix && npm run stylelint:fix"
@@ -34,12 +42,16 @@
     "eslint-plugin-react": "^7.18.0",
     "eslint-plugin-react-hooks": "^2.3.0",
     "eslint-watch": "^6.0.1",
+    
+    "prettier": "1.19.1",
+    "onchange": "^6.1.0",
+    "tree-kill": ">=1.2.2",
+
+
     "stylelint-config-standard": "^19.0.0",
     "stylelint": "^13.0.0",
-    "husky": "^4.2.1",
-    "onchange": "^6.1.0",
-    "prettier": "1.19.1",
-    "tree-kill": ">=1.2.2"
+
+    "husky": "^4.2.1"
   },
   "@comment devDependencies": [
     "tree-kill is a dependency of onchange.  There is a high vulnerability, so putting explicitly setting the version."
