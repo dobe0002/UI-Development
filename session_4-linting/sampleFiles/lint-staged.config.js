@@ -16,4 +16,7 @@ module.exports = {
     // "git add"
    
   ],
+  "src/**/*.html": [
+    // "npm run prettier:all", // use to just check files
+  ]
 };
