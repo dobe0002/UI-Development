@@ -17,17 +17,21 @@
     "----------------------------------------------------------2":"",
 
     "eslint": "esw --color ",
+    "eslint:all": "esw --color ",
     "eslint:fix": "npm run eslint -- --fix",
+    "eslint:fixAll": "npm run eslint -- --fix",
     "eslint:watch": "esw --color  --watch ",
     "----------------------------------------------------------3":"",
 
-    "stylelint":"stylelint --ignore-path ./.eslintignore './**/*.+(css|scss)'",
+    "stylelint": "stylelint --ignore-path ./.eslintignore ",
+    "stylelint:all":"npm run stylelint './**/*.+(css|scss)'",
     "stylelint:fix":"npm run stylelint -- --fix",
+    "stylelint:fixAll":"npm run stylelint:all -- --fix",
     "----------------------------------------------------------4":"",
 
-    "lint": "esw ",
-    "lint:all": "npm run stylelint && npm run lint",
-    "lint:fixAll": "npm run prettier:fixAll && npm run eslint:fix && npm run stylelint:fix"
+    "lint": "npm run eslint ",
+    "lint:all": "npm run stylelint:all && npm run lint",
+    "lint:fixAll": "npm run prettier:fixAll && npm run eslint:fixAll && npm run stylelint:fixAll"
   },
   "dependencies": {},
   "devDependencies": {
