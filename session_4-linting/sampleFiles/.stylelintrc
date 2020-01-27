@@ -1,3 +1,4 @@
 {
+  "ignorePath":"./eslintignore",
   "extends": "stylelint-config-standard"
 }
