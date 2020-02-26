@@ -3,7 +3,7 @@ Create react app:
 
 Install:
 ```
-npx create-react-app my-app
+npx create-react-app ipsum_app
 ```
 
 Website: https://create-react-app.dev/
@@ -25,3 +25,20 @@ Website: https://reactstrap.github.io/
 ```
 npm install --save reactstrap react react-dom
 ```
+
+
+## Get data method:
+```
+async loadIpsum(type, paragraphs = 3) {
+    let url = `https://baconipsum.com/api/?type=all-meat&paras=${paragraphs}`;
+    if (type === 'pony') {
+      url = `https://ponyipsum.com/api/?type=all-pony&paras=${paragraphs}`;
+    }
+    const data = await axios.get(url);
+    setTimeout(() => {
+      
+
+
+    }, 3000);
+  }
+  ```
